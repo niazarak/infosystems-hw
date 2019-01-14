@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "outDir": "dist/",
+        "target": "es6",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ],
+            // "@common/*": [
+            //     "common/*"
+            // ]
+        },
+        "jsx": "react"
+    },
+    "include": [
+        "server/**/*",
+        "common/**/*"
+    ]
+}

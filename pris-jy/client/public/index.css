@@ -1,0 +1,23 @@
+body {
+}
+
+#navigation {
+    /* background-color: olivedrab; */
+    /* width: 100%; */
+}
+
+.card {
+    min-width: 500;
+}
+
+.create-entry-paper, .signin-paper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 30px;
+}
+
+#create-entry-submit, #signin-submit {
+    margin-top: 50px;
+}
