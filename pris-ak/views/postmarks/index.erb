@@ -1,0 +1,14 @@
+<h1 class="title">Марки</h1>
+<% @postmarks.each do |postmark| %>
+	<div class="level box">
+		<div class="level-left">
+			<div class="level-item">
+		      	<p class="subtitle is-5">
+		      		<a href="/postmark/<%=postmark.id%>"><%= postmark.name %></a>
+		      		<br/>
+		      		Год: <strong><%= postmark.year %></strong>
+		      	</p>
+			</div>
+		</div>
+	</div>
+<%end%>

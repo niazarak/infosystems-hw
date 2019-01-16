@@ -1,0 +1,19 @@
+<h1 class="title"><%= @collector.name %></h1>
+<nav class="panel">
+  	<p class="panel-heading">
+    	Марки
+	</p>
+	<% @collector.postmarks.each do |postmark| %>
+		<a class="panel-block" href="/postmark/<%=postmark.id%>">
+			<%=postmark.name%>
+		</a>
+	<%end%>
+	<p class="panel-block">
+		<a class="button is-warning" href="/collector/<%=@collector.id%>/newPostmark">
+			Добавить марку
+		</a>
+	</p>
+</nav>
+<form action="/collector/<%=@collector.id%>/delete" method="post">
+	<button type="submit" class="button is-danger">Удалить</button>
+</form>

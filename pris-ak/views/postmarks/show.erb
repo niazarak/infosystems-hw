@@ -1,0 +1,8 @@
+<h1 class="title is-1 is-spaced"><%= @postmark.name %></h1>
+<h4 class="subtitle is-4">Год: <%= @postmark.year%></h4>
+<h4 class="subtitle is-4">
+	Владелец: <a href="/collector/<%=@postmark.collector.id%>"><%=@postmark.collector.name%></a>
+</h4>
+<form action="/postmark/<%=@postmark.id%>/delete" method="post">
+	<button type="submit" class="button is-danger">Удалить</button>
+</form>

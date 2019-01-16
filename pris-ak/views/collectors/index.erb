@@ -1,0 +1,23 @@
+<h1 class="title">Коллекционеры</h1>
+<div class="level">
+	<div class="level-left">
+	</div>
+	<div class="level-right">
+	    <dif class="level-item">
+			<a class="button is-warning" href="/collector/new">Добавить</a>
+		</dif>
+  	</div>
+</div>
+<% @collectors.each do |collector| %>
+	<div class="level box">
+		<div class="level-left">
+			<div class="level-item">
+		      	<p class="subtitle is-5">
+		      		<a href="/collector/<%=collector.id%>"><%= collector.name %></a>
+		      		<br/>
+		      		Количество марок: <%= collector.postmarks.size %>
+		      	</p>
+			</div>
+		</div>
+	</div>
+<%end%>

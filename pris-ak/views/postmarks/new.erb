@@ -1,0 +1,20 @@
+<h2 class="title">Добавление марки</h2>
+<form method="POST" action="/collector/<%=@collector.id%>/postmarks">
+	<div class="field">
+		<label class="label">Название</label>
+		<div class="control">
+			<input class="input" type="text" placeholder="Имя" name="name">
+		</div>
+	</div>
+	<div class="field">
+		<label class="label">Год выпуска</label>
+		<div class="control">
+			<input class="input" type="text" placeholder="Год" name="year">
+		</div>
+	</div>
+	<div class="field">
+		<div class="control">
+			<button class="button is-success" type="submit">Добавить</button>
+		</div>
+	</div>
+</form>

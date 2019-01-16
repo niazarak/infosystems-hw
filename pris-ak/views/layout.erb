@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filato</title>
+	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css"/>
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+</head>
+<body>
+	<%if logged_in?%>
+		<form action="/logout" method="POST" id="FORR">
+			<!-- <a type="submit" class="navbar-item">Выйти</a> -->
+		</form>
+	<%end%>
+	<nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+		    <a class="navbar-item" id="filato-brand" href="/">
+				Filato
+			</a>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item" href="/collectors">
+					Коллекционеры
+				</a>
+				<a class="navbar-item" href="/postmarks">
+					Марки
+				</a>
+			</div>
+			<div class="navbar-end">
+			    <div class="navbar-item">
+				<%if logged_in?%>
+					<button class="button is-rounded" form="FORR">Выйти</button>
+				<%else%>
+					<a class="button is-rounded" href="/signin">Войти</a>
+				<%end%>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container is-fluid" style="margin: 32px">
+		<%= yield %>
+	</div>
+</body>
+</html>
