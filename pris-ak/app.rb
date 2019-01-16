@@ -8,6 +8,7 @@ class ApplicationController < Sinatra::Base
 		set :environment, :development
 		set :public_folder, "public"
 		enable :sessions
+		set :session_secret, "ummsecrettt"
 		Dir["./models/*.rb"].each {|file| require file }
 	end
 
